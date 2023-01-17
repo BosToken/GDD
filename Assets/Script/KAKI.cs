@@ -34,8 +34,7 @@ public class KAKI : MonoBehaviour
             {
                 isGrounded = false;
                 velocity.y = jumpVelocity;
-                isHoldingJump = true;
-                holdJumpTimer = 0;
+                isHoldingJump = true;                
             }
         }
 
@@ -68,7 +67,8 @@ public class KAKI : MonoBehaviour
             if (pos.y <= groundHeight)
             {
                 pos.y = groundHeight;
-                isGrounded = true;                
+                isGrounded = true;
+                holdJumpTimer = 0;                
             }
         }
 

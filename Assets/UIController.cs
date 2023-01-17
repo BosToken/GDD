@@ -5,24 +5,24 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    KAKI player;
-    Text distanceText;
-    private void Awake()
-    {
-        player = GameObject.Find("KAKI").GetComponent<KAKI>();
+     KAKI player;
+     Text distanceText;
+     private void Awake()
+     {
+         player = GameObject.Find("KAKI").GetComponent<KAKI>();
         distanceText = GameObject.Find("DistanceText").GetComponent<Text>();
-    }
+     }
 
-    // Start is called before the first frame update
-    void Start()
+    // // Start is called before the first frame update
+     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        int distance = Mathf.FloorToInt(player.distance);
+    // // Update is called once per frame
+     void Update()
+     {
+         int distance = Mathf.FloorToInt(player.distance);
         distanceText.text = distance + " m";
-    }
+     }
 }
