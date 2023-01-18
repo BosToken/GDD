@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class KAKI : MonoBehaviour
 {
     KAKI player;
+    Enemy enemy;
     public float gravity = -100;
     public Vector2 velocity;
     public float maxAcceleration = 10;
@@ -24,6 +25,7 @@ public class KAKI : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("KAKI").GetComponent<KAKI>();
+        enemy = GameObject.Find("Enemy").GetComponent<Enemy>();
     }
 
     // Update is called once per frame
@@ -54,10 +56,10 @@ public class KAKI : MonoBehaviour
         {
             health--;            
             if (health == 1) {
-                Vector2 pos = transform.position;
-                pos.x -= player.velocity.x * Time.fixedDeltaTime;
-                pos.x = 13;
-                acceleration = 1;                             
+                Vector2 enpos = transform.position;
+                enpos = enemy.transform.position;
+                enpos.x = 13;
+                acceleration = 4;                             
             }
             else if (health == 0) {
                 SceneManager.LoadScene("Game");
