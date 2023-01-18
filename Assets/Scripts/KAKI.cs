@@ -7,6 +7,7 @@ public class KAKI : MonoBehaviour
 {
     KAKI player;
     Enemy enemy;
+    GameObject gop;
     public float gravity = -100;
     public Vector2 velocity;
     public float maxAcceleration = 10;
@@ -21,11 +22,14 @@ public class KAKI : MonoBehaviour
     public float holdJumpTimer = 0.0f;
     public float jumpGroundThreshold = 1;
     public int health = 2;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("KAKI").GetComponent<KAKI>();
-        enemy = GameObject.Find("Enemy").GetComponent<Enemy>();
+        player = GameObject.Find("KAKI").GetComponent<KAKI>();                
+        animator = GetComponent<Animator>();
+        gop = GameObject.Find("GameOverPanel");
+        gop.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,35 +39,45 @@ public class KAKI : MonoBehaviour
         float groundDistance = Mathf.Abs(post.y - groundHeight);
         if (isGrounded || groundDistance <= jumpGroundThreshold)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 isGrounded = false;
                 velocity.y = jumpVelocity;
                 isHoldingJump = true;
                 holdJumpTimer = 0;
+            } 
+            if (Input.touchCount > 0) {
+                Touch first = Input.GetTouch(0);
+                if(first.phase == TouchPhase.Stationary)
+                {
+                    isGrounded = false;
+                    velocity.y = jumpVelocity;
+                    isHoldingJump = true;
+                    holdJumpTimer = 0;
+                } else {
+                    isHoldingJump = false;
+                }
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             isHoldingJump = false;
         }
-    }
+    }    
 
     void OnCollisionEnter2D(Collision2D Coll)
     {
-        if(Coll.gameObject.tag=="Respawn")
+        if(Coll.gameObject.tag == "Respawn")
         {
-            health--;            
+            health--;
             if (health == 1) {
-                Vector2 enpos = transform.position;
-                enpos = enemy.transform.position;
-                enpos.x = 13;
-                acceleration = 4;                             
-            }
-            else if (health == 0) {
-                SceneManager.LoadScene("Game");
+                velocity.x = velocity.x * (20 / 100);
+                animator.Play("Contaminate");
+            } else if (health == 0) {                
                 //Game Over
+                Time.timeScale = 0;
+                gop.SetActive(true);
             }            
         }
     }

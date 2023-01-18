@@ -1,12 +1,8 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Grass/grassanim.anim.meta
 guid: e144c66cb0f270248b819c1493557110
-========
-guid: a1fdd4c7d5d7a254d8ec4347247663a1
->>>>>>>> df316d36015df0b072666bfb263e6b0972668674:Assets/Character/Contaminate/Contaminate.anim.meta
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 7400000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

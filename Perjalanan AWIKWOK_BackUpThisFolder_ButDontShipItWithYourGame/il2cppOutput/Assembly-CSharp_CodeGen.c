@@ -1,0 +1,141 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+// 0x00000001 System.Void Enemy::Start()
+extern void Enemy_Start_m8BBD9A5AE10A27ABDFCD9168B93CD9C69D229034 (void);
+// 0x00000002 System.Void Enemy::Update()
+extern void Enemy_Update_m4149CFC3AC081AF0D654D9BDB6BC9B5540CE03D8 (void);
+// 0x00000003 System.Void Enemy::OnCollisionEnter2D(UnityEngine.Collision2D)
+extern void Enemy_OnCollisionEnter2D_mCEA8628A3E777C0C06686FB5AE91FB49A94A1FA2 (void);
+// 0x00000004 System.Void Enemy::FixedUpdate()
+extern void Enemy_FixedUpdate_mC96E5B789335D23FC34546AD504EEBB0F054490B (void);
+// 0x00000005 System.Void Enemy::.ctor()
+extern void Enemy__ctor_mB6697627910F785A971C20C671DEFBA9D921D933 (void);
+// 0x00000006 System.Void KAKI::Start()
+extern void KAKI_Start_m7348AA94D8E62693AD3E110A76D3916EBCF9E164 (void);
+// 0x00000007 System.Void KAKI::Update()
+extern void KAKI_Update_mE54BF54B1F0C424A29664E70A5A39B69F9E758D9 (void);
+// 0x00000008 System.Void KAKI::OnCollisionEnter2D(UnityEngine.Collision2D)
+extern void KAKI_OnCollisionEnter2D_mB23D4EE2D949564275ADCA215662EB3DFC904BD3 (void);
+// 0x00000009 System.Void KAKI::FixedUpdate()
+extern void KAKI_FixedUpdate_m9ED2EDC591400EF0FA93051EFFAC0A5B8A6536ED (void);
+// 0x0000000A System.Void KAKI::.ctor()
+extern void KAKI__ctor_m3E6CA1B5B5A42E8A099241243FA9E7C9D31E32B8 (void);
+// 0x0000000B System.Void MainMenu::PlayGame()
+extern void MainMenu_PlayGame_mEC2DA4274CDD4D658AE27480E2C70C6049A496B5 (void);
+// 0x0000000C System.Void MainMenu::QuitGame()
+extern void MainMenu_QuitGame_mBF761274C14BD7341FE8C32A538D28343B63EDC4 (void);
+// 0x0000000D System.Void MainMenu::.ctor()
+extern void MainMenu__ctor_m8209CEC1D907C87A96D777961F4D0536E6E948DD (void);
+// 0x0000000E System.Void PauseMenu::PauseGame()
+extern void PauseMenu_PauseGame_m5F9F76E8D0822B61CEE60DD44562CA95076BAEEF (void);
+// 0x0000000F System.Void PauseMenu::ResumeGame()
+extern void PauseMenu_ResumeGame_m8C22F921DCAA4122C7FF4FCDB87A5041962493A0 (void);
+// 0x00000010 System.Void PauseMenu::RetryGame()
+extern void PauseMenu_RetryGame_mE95617763D9338FB54152D0C95C400E808E6E795 (void);
+// 0x00000011 System.Void PauseMenu::MainMenu()
+extern void PauseMenu_MainMenu_mEB01C45B5CC2F6E8EE0A84D839C4697B00913B25 (void);
+// 0x00000012 System.Void PauseMenu::.ctor()
+extern void PauseMenu__ctor_m81B0E020DC5008DA4D414200BAAF7122B430D826 (void);
+// 0x00000013 System.Void SettingMenu::Start()
+extern void SettingMenu_Start_m9DDDE93DB8F870CED0C44443290466D90E401A93 (void);
+// 0x00000014 System.Void SettingMenu::Update()
+extern void SettingMenu_Update_mEA047F9BA7EFC981EFC3F510C5F786B8C9B1C1D1 (void);
+// 0x00000015 System.Void SettingMenu::.ctor()
+extern void SettingMenu__ctor_m07F34199ED374E64B11766E420749A2F14D6B0EA (void);
+// 0x00000016 System.Void UIController::Awake()
+extern void UIController_Awake_m8D57F9A6CDDF4400F8E75A66BA0719BE0A125A3D (void);
+// 0x00000017 System.Void UIController::Start()
+extern void UIController_Start_mDB390A5128712606F938A56F294FBDE7DFE649D4 (void);
+// 0x00000018 System.Void UIController::Update()
+extern void UIController_Update_m8F538932F53B831D5B82191902ADADACD32B108B (void);
+// 0x00000019 System.Void UIController::.ctor()
+extern void UIController__ctor_mFF218DBC8CCEFE36AAC295D2376501658CD8B7A2 (void);
+static Il2CppMethodPointer s_methodPointers[25] = 
+{
+	Enemy_Start_m8BBD9A5AE10A27ABDFCD9168B93CD9C69D229034,
+	Enemy_Update_m4149CFC3AC081AF0D654D9BDB6BC9B5540CE03D8,
+	Enemy_OnCollisionEnter2D_mCEA8628A3E777C0C06686FB5AE91FB49A94A1FA2,
+	Enemy_FixedUpdate_mC96E5B789335D23FC34546AD504EEBB0F054490B,
+	Enemy__ctor_mB6697627910F785A971C20C671DEFBA9D921D933,
+	KAKI_Start_m7348AA94D8E62693AD3E110A76D3916EBCF9E164,
+	KAKI_Update_mE54BF54B1F0C424A29664E70A5A39B69F9E758D9,
+	KAKI_OnCollisionEnter2D_mB23D4EE2D949564275ADCA215662EB3DFC904BD3,
+	KAKI_FixedUpdate_m9ED2EDC591400EF0FA93051EFFAC0A5B8A6536ED,
+	KAKI__ctor_m3E6CA1B5B5A42E8A099241243FA9E7C9D31E32B8,
+	MainMenu_PlayGame_mEC2DA4274CDD4D658AE27480E2C70C6049A496B5,
+	MainMenu_QuitGame_mBF761274C14BD7341FE8C32A538D28343B63EDC4,
+	MainMenu__ctor_m8209CEC1D907C87A96D777961F4D0536E6E948DD,
+	PauseMenu_PauseGame_m5F9F76E8D0822B61CEE60DD44562CA95076BAEEF,
+	PauseMenu_ResumeGame_m8C22F921DCAA4122C7FF4FCDB87A5041962493A0,
+	PauseMenu_RetryGame_mE95617763D9338FB54152D0C95C400E808E6E795,
+	PauseMenu_MainMenu_mEB01C45B5CC2F6E8EE0A84D839C4697B00913B25,
+	PauseMenu__ctor_m81B0E020DC5008DA4D414200BAAF7122B430D826,
+	SettingMenu_Start_m9DDDE93DB8F870CED0C44443290466D90E401A93,
+	SettingMenu_Update_mEA047F9BA7EFC981EFC3F510C5F786B8C9B1C1D1,
+	SettingMenu__ctor_m07F34199ED374E64B11766E420749A2F14D6B0EA,
+	UIController_Awake_m8D57F9A6CDDF4400F8E75A66BA0719BE0A125A3D,
+	UIController_Start_mDB390A5128712606F938A56F294FBDE7DFE649D4,
+	UIController_Update_m8F538932F53B831D5B82191902ADADACD32B108B,
+	UIController__ctor_mFF218DBC8CCEFE36AAC295D2376501658CD8B7A2,
+};
+static const int32_t s_InvokerIndices[25] = 
+{
+	3462,
+	3462,
+	2827,
+	3462,
+	3462,
+	3462,
+	3462,
+	2827,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+	3462,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	25,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL, // module initializer,
+	NULL,
+	NULL,
+	NULL,
+};
