@@ -21,6 +21,7 @@ public class KAKI : MonoBehaviour
     public float holdJumpTimer = 0.0f;
     public float jumpGroundThreshold = 1;
     public int health = 2;
+    public Animator contaminate;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,7 +60,9 @@ public class KAKI : MonoBehaviour
                 Vector2 enpos = transform.position;
                 enpos = enemy.transform.position;
                 enpos.x = 13;
-                acceleration = 4;                             
+                acceleration = 4;  
+
+                contaminate = GetComponent<Animator>();                           
             }
             else if (health == 0) {
                 SceneManager.LoadScene("Game");
