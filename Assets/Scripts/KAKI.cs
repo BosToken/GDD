@@ -8,10 +8,11 @@ public class KAKI : MonoBehaviour
     KAKI player;
     Enemy enemy;
     GameObject gop;
-    public float gravity = -100;
+    SettingMenu sm;
+    public float gravity = -65;
     public Vector2 velocity;
-    public float maxAcceleration = 10;
-    public float acceleration = 10;
+    public float maxAcceleration = 5;
+    public float acceleration = 5;
     public float distance = 0;
     public float jumpVelocity = 20;
     public float maxVelocity = 100;
@@ -23,11 +24,15 @@ public class KAKI : MonoBehaviour
     public float jumpGroundThreshold = 1;
     public int health = 2;
     private Animator animator;
+    [SerializeField] private AudioSource jumpSfx;
+    [SerializeField] private AudioSource ctmtSfx;
+    [SerializeField] private AudioSource dedSfx;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("KAKI").GetComponent<KAKI>();                
         animator = GetComponent<Animator>();
+        sm = GetComponent<SettingMenu>();
         gop = GameObject.Find("GameOverPanel");
         gop.SetActive(false);
     }
@@ -45,6 +50,7 @@ public class KAKI : MonoBehaviour
                 velocity.y = jumpVelocity;
                 isHoldingJump = true;
                 holdJumpTimer = 0;
+                jumpSfx.Play();             
             } 
             if (Input.touchCount > 0) {
                 Touch first = Input.GetTouch(0);
@@ -54,6 +60,7 @@ public class KAKI : MonoBehaviour
                     velocity.y = jumpVelocity;
                     isHoldingJump = true;
                     holdJumpTimer = 0;
+                    jumpSfx.Play();
                 } else {
                     isHoldingJump = false;
                 }
@@ -72,12 +79,14 @@ public class KAKI : MonoBehaviour
         {
             health--;
             if (health == 1) {
-                velocity.x = velocity.x * (20 / 100);
+                velocity.x = velocity.x * (10 / 100);
                 animator.Play("Contaminate");
+                ctmtSfx.Play();
             } else if (health == 0) {                
                 //Game Over
                 Time.timeScale = 0;
                 gop.SetActive(true);
+                dedSfx.Play();
             }            
         }
     }
